@@ -118,6 +118,8 @@ Create a function in your `app/Controller/AppController.php` like so:
 			//Oh no, better look at this transaction to determine what to do; like email a decline letter.
 		}
 	} 
+	
+Important: You must use valid paypal test account to accept IPN callback. Register it at https://developer.paypal.com
   
 ## Basic Email Feature:
 Utility method to send basic emails based on a paypal IPN transaction.
