@@ -39,7 +39,7 @@ http://github.com/webtechnick
 
 		$ cake schema create --plugin PaypalIpn
 		
-3. Add the following into your /app/Config/Routes.php file (optional):
+3. Add the following into your /app/Config/Routes.php file:
 
 		/* Paypal IPN plugin */
 		Router::connect('/paypal_ipn/process', array('plugin' => 'paypal_ipn', 'controller' => 'instant_payment_notifications', 'action' => 'process'));
