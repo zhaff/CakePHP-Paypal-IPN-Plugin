@@ -33,7 +33,7 @@ http://github.com/webtechnick
 1. Copy plugin into your `app/Plugin/PaypalIpn` directory
 2. Load the plugin in `bootstrap.php`
 
-		CakePlugin::load('PaypalIpn');
+		CakePlugin::load('PaypalIpn', array('bootstrap' => array('paypal_ipn_config')));
 
 2. Run the schema to create the required tables.
 
@@ -83,6 +83,9 @@ http://github.com/webtechnick
 		
 		//Test Example
 		$this->Paypal->button('Pay Now', array('test' => true, 'amount' => '12.00', 'item_name' => 'test item'));
+		
+		// Test adding button styles
+		$this->Paypal->button('Pay Now', array('test' => true, 'amount' => '12.00', 'item_name' => 'test item'), array('css' => 'btn btn-primary);
        
 ## Alternatively to Paypal Helper 
 Instead of the Paypal Helper you can use your custom buttons but make sure to set notify_url to your configured route.
